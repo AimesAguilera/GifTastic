@@ -1,0 +1,200 @@
+
+body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: Georgia;
+    }
+    
+    /* ====== HEADER ====== */
+    header {
+        margin: 0;
+        height: 100px;
+        background: linear-gradient(180deg, #666, #000);
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+    header h1 {
+        position: relative;
+        margin-left: 10%;
+        text-align: left;
+        color: #F5DEB3;
+        text-shadow: 0 10px 20px rgba(0,0,0,2);
+    }
+    
+    /* ====== SEARCH BAR ====== */
+    .box {
+        margin: 30px;
+        position: relative;
+        text-align: right;
+        margin-right: 10%;
+        width: 350px;
+    }
+    input {
+        position: relative;
+        display: inline-block;
+        font-size: 20px;
+        font-family: Georgia;
+    }
+    input[type='text'] {
+        background: #fff;
+        width: 200px;
+        height: 20px;
+        border: none;
+        outline: none;
+        padding: 5px 15px;
+        border-radius: 25px 0 0 25px;
+    }
+    input[type='submit'] {
+        position: relative;
+    
+        /* THIS BRINGS THE SPACE BETWEEN INPUT AND SUBMIT BUTTON TOGETHER */
+        left: -5px;
+    
+        border-radius: 0 25px 25px 0;
+        height: 30px;
+        width: 80px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: #666;
+        color: #000;
+    }
+    input[type='submit']:hover {
+        background: #F5DEB3;
+        color: #333;
+    }
+    
+    /* ====== BANNER ====== */
+    #banner {
+        width: 100%;
+        height: 500px;
+        position: fixed;
+        top: 100px;
+        background-image: url('../images/film-stocks.jpeg');
+        background-size: cover;
+    }
+    #banner h2 {
+        top: 10%;
+        position: relative;
+    }
+    button {
+        background: linear-gradient(45deg, #F5DEB3, #666, #333);
+        color: #000;
+        height: 40px;
+        border: 1px solid #000;
+        font-size: 17px;
+        margin: 10px;
+        font-family: Georgia;
+        border-radius: 8px;
+        box-shadow: 0 8px 12px rgba(0,0,0,2);
+        opacity: .9;
+    }
+    button:focus {
+        outline: none;
+    }
+    button::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,.5);
+        width: 60px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5s;
+        filter: blur(30px);
+        transform: translateX(-130px) skewX(-15deg);
+    }
+    button::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,.2);
+        widows: 30px;
+        height: 100%;
+        left: 30px;
+        top: 0;
+        opacity: 0;
+        filter: blur(30px);
+        transform: translate(-100px) scaleX(-15deg);
+    }
+    button:hover {
+        background: linear-gradient(45deg, #333, #666, #F5DEB3);
+        cursor: pointer;
+        color: #000;
+        opacity: 1;
+        font-weight: bold;
+    }
+    
+    /* ====== WHERE GIF GO ====== */
+    #content {
+        width: 100%;
+        position: relative;
+        top: 400px;
+        background: #000;
+        height: 2000px;
+        color: white;
+        overflow: auto;
+    }
+    .gifHolder {
+        float: left;
+        margin: 15px;
+        cursor: pointer;
+    }
+
+
+
+@media screen and (max-width: 768px) {
+    header {
+    height: 85px;
+    }
+
+    #banner {
+    top: 85px;
+    }
+    input[type='text'] {
+    width: 185px;
+    height: 15px;
+    padding: 5px 15px;
+    }
+    input[type='submit'] {
+    height: 25px;
+    width: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    input[type='text'] {
+        width: 150px;
+        height: 15px;
+        padding: 5px 15px;
+    }
+    input[type='submit'] {
+        height: 25px;
+        width: 60px;
+    }
+    .box {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    header h1 {
+        padding-top: 10px;
+        font-size: 25px;
+    }
+    input[type='text'] {
+        width: 120px;
+        height: 15px;
+        padding: 5px 15px;
+    }
+    input[type='submit'] {
+        height: 25px;
+        width: 50px;
+
+    }
+}
